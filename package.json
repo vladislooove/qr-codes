@@ -11,6 +11,7 @@
   "devDependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "qrcode": "^1.2.0"
+    "qrcode": "^1.2.0",
+    "qrcode-reader": "^1.0.4"
   }
 }

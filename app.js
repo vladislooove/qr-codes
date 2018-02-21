@@ -1,9 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const QRCode = require('qrcode');
+const QRCodereader = require('qrcode-reader');
+
 
 const app = express();
 app.use(bodyParser.json());
+
+const qr = new QRCodereader();
 
 
 app.get('/', (req, res) => {
@@ -19,6 +23,10 @@ app.post('/create', (req, res) => {
     .catch(err => {
         res.send(err)
     })
+});
+
+app.post('/read', (req, res) => {
+    console.log(req)
 });
 
 app.listen(8080, () => {
